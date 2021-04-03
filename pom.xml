@@ -7,7 +7,6 @@
 		<module>eureka_client_consumer</module>
         <module>config_server_demo</module>
         <module>gateway_demo</module>
-		<module>bus_server_demo</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

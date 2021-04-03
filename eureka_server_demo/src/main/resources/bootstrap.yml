@@ -3,9 +3,11 @@ server:
 spring:
   application:
     name: eureka-server
-  cloud:
-    config:
-      label: master
-      uri: http://localhost:9010
-      profile: test
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+    proxy-password: cloud-password
 

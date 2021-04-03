@@ -1,16 +1,40 @@
 spring:
   application:
     name: zmh_config_server
+  profiles:
+    active: test
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/jonedaniel/openconfig.git
-          search-paths: zmh_config_repo
+          uri: https://gitee.com/zmh1993/zmh_config_repo.git
+          search-paths:  springcloud_demo
           username: ${git_username}
-          password: ${git_password}
-          skip-ssl-validation: true
-  profiles:
-    active: test
+          password: ${GIT_PWD}
+          force-pull: true
+          clone-on-start: true
+#          strict-host-key-checking: false
+#          private-key: ${PRIVATE_KEY}
+
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: ${ZMH_HOST}
+    port: 5672
+    username: admin
+    password: ${THE_PWD}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+      proxy-password: cloud-password
 server:
   port: 9010
