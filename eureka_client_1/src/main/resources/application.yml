@@ -3,7 +3,7 @@ spring:
     name: eureka-client-1
   cloud:
     config:
-      label: mater
+      label: master
       uri: http://localhost:9010
 server:
   port: 9001
