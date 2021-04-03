@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: zmh_config_server
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+server:
+  port: 9010
