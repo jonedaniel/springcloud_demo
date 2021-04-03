@@ -1,0 +1,10 @@
+server:
+  port: 9013
+spring:
+  application:
+    name: bus-server-demo
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:9010
+      profile: test
