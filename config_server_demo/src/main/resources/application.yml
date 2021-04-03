@@ -5,6 +5,7 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/jonedaniel/springcloud_demo
+          search-paths:
 server:
   port: 9010
