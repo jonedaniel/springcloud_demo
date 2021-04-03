@@ -1,4 +1,4 @@
-package com.zmh.eureka_client_2;
+package com.zmh.eureka_client_consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +19,12 @@ public class ConsumeController {
 
     @GetMapping("/work")
     public Object work() {
-        return feignClientService.work();
+        return "consumers :  "+feignClientService.work();
+    }
+
+    @GetMapping("/")
+    public Object index() {
+        return "consumers index  ";
     }
 
 }

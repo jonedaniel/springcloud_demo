@@ -1,4 +1,4 @@
-package com.zmh.eureka_client_1;
+package com.zmh.eureka_client_producer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,5 +21,10 @@ public class ProducerController {
     @GetMapping("/var")
     public Object var() {
         return var;
+    }
+
+    @GetMapping("/")
+    public Object index() {
+        return "producer index  ";
     }
 }
