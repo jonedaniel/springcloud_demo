@@ -1,9 +1,10 @@
 spring:
   application:
     name: eureka-client-1
+  cloud:
+    config:
+      label: mater
+      uri: http://localhost:9010
 server:
   port: 9001
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:9000/eureka/
+
