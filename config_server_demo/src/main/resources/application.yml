@@ -6,8 +6,9 @@ spring:
       server:
         git:
           uri: https://github.com/jonedaniel/springcloud_demo
-          search-paths: config_repo
+          search-paths: zmh_config_repo
           username: ${git_username}
           password: ${git_password}
+      enabled: true
 server:
   port: 9010
