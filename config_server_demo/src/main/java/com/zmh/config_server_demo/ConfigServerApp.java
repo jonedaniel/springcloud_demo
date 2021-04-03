@@ -4,14 +4,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
-import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableConfigServer
 @RestController
-public class ConfigServerDemoApp {
+public class ConfigServerApp {
     @Value("${git_username}")
     String username;
     @Value("${git_password}")
@@ -23,6 +22,6 @@ public class ConfigServerDemoApp {
         return "git";
     }
     public static void main(String[] args) {
-        SpringApplication.run(ConfigServerDemoApp.class, args);
+        SpringApplication.run(ConfigServerApp.class, args);
     }
 }

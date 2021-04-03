@@ -1,10 +1,10 @@
+server:
+  port: 9001
 spring:
   application:
-    name: eureka-client-2
+    name: eureka-client-producer
   cloud:
     config:
       label: master
       uri: http://localhost:9010
-server:
-  port: 9002
-
+      profile: test

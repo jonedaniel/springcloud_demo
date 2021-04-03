@@ -9,5 +9,8 @@ spring:
           search-paths: zmh_config_repo
           username: ${git_username}
           password: ${git_password}
+          skip-ssl-validation: true
+  profiles:
+    active: test
 server:
   port: 9010
